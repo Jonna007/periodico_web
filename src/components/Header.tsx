@@ -6,7 +6,7 @@ export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Inicio', href: '#' },
+    { name: 'Inicio', href: '#inicio' },
     { name: 'Noticias', href: '#noticias' },
     { name: 'Carreras', href: '#carreras' },
     { name: 'Estudiantes', href: '#estudiantes' },
@@ -14,6 +14,14 @@ export default function Header() {
     { name: 'Eventos', href: '#eventos' },
     { name: 'Admisiones', href: '#admisiones' }
   ];
+
+  const handleNavClick = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
@@ -36,41 +44,41 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Header */}
+      {/* Main Header - Reducido */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center py-8">
-          {/* Logo y Título Principal */}
-          <div className="text-center mb-6">
-            <div className="flex justify-center items-center space-x-4 mb-4">
-              <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-3 rounded-full">
-                <BookOpen className="w-10 h-10 text-white" />
+        <div className="flex flex-col items-center py-4">
+          {/* Logo y Título Principal - Más compacto */}
+          <div className="text-center mb-4">
+            <div className="flex justify-center items-center space-x-3 mb-3">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-2 rounded-full">
+                <BookOpen className="w-6 h-6 text-white" />
               </div>
-              <div className="bg-gradient-to-r from-orange-500 to-red-600 p-3 rounded-full">
-                <GraduationCap className="w-10 h-10 text-white" />
+              <div className="bg-gradient-to-r from-orange-500 to-red-600 p-2 rounded-full">
+                <GraduationCap className="w-6 h-6 text-white" />
               </div>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-800 to-orange-600 mb-2">
+            <h1 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-800 to-orange-600 mb-1">
               SUDA NOTICIAS
             </h1>
-            <p className="text-xl md:text-2xl text-slate-700 font-semibold mb-2">
+            <p className="text-lg md:text-xl text-slate-700 font-semibold mb-1">
               Instituto Superior Sudamericano
             </p>
-            <p className="text-base text-slate-600">
+            <p className="text-sm text-slate-600">
               Formando profesionales de excelencia en Cuenca, Ecuador
             </p>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8 bg-slate-50 px-8 py-3 rounded-full shadow-md">
+          <nav className="hidden lg:flex items-center space-x-6 bg-slate-50 px-6 py-2 rounded-full shadow-md">
             {navigationItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
+                onClick={() => handleNavClick(item.href)}
                 className="text-slate-700 hover:text-blue-600 font-medium transition-colors duration-200 relative group px-3 py-2"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-3 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-[calc(100%-24px)]"></span>
-              </a>
+              </button>
             ))}
           </nav>
         </div>
@@ -111,13 +119,13 @@ export default function Header() {
           <div className="lg:hidden pb-4">
             <nav className="grid grid-cols-1 gap-2 bg-slate-50 rounded-lg p-4">
               {navigationItems.map((item) => (
-                <a
+                <button
                   key={item.name}
-                  href={item.href}
-                  className="block px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-white rounded-lg transition-colors"
+                  onClick={() => handleNavClick(item.href)}
+                  className="block px-4 py-3 text-slate-700 hover:text-blue-600 hover:bg-white rounded-lg transition-colors text-left"
                 >
                   {item.name}
-                </a>
+                </button>
               ))}
             </nav>
           </div>
