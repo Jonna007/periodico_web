@@ -1,10 +1,8 @@
 import React from 'react';
 import Header from './components/Header';
 import NewsCarousel from './components/NewsCarousel';
-import TechNews from './components/TechNews';
 import NewsGrid from './components/NewsGrid';
-import ProjectsGrid from './components/ProjectsGrid';
-import StartupSpotlight from './components/StartupSpotlight';
+import CarrerasSection from './components/CarrerasSection';
 import Statistics from './components/Statistics';
 import Footer from './components/Footer';
 
@@ -13,10 +11,8 @@ function App() {
     <div className="min-h-screen bg-white">
       <Header />
       <NewsCarousel />
-      <TechNews />
       <NewsGrid />
-      <ProjectsGrid />
-      <StartupSpotlight />
+      <CarrerasSection />
       <Statistics />
       <Footer />
     </div>

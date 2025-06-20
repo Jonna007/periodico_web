@@ -1,19 +1,19 @@
 import React from 'react';
-import { Newspaper, Mail, Phone, MapPin, Github, Linkedin, Twitter, Rss } from 'lucide-react';
+import { GraduationCap, Mail, Phone, MapPin, Facebook, Instagram, Youtube, Globe } from 'lucide-react';
 
 export default function Footer() {
   const footerSections = [
     {
-      title: "Secciones",
-      links: ["Proyectos Informáticos", "Noticias Tecnológicas", "Startups", "Ciberseguridad", "Inteligencia Artificial", "Análisis de Mercado"]
+      title: "Carreras",
+      links: ["Desarrollo de Software", "Gastronomía", "Administración de Empresas", "Enfermería", "Diseño Gráfico", "Contabilidad y Auditoría"]
     },
     {
-      title: "Recursos",
-      links: ["Reportes Especiales", "Casos de Estudio", "Whitepapers", "Webinars", "Newsletter", "API de Noticias"]
+      title: "Servicios",
+      links: ["Biblioteca Digital", "Laboratorios", "Bolsa de Empleo", "Bienestar Estudiantil", "Educación Continua", "Certificaciones"]
     },
     {
-      title: "Empresa",
-      links: ["Sobre TechHerald", "Nuestro Equipo", "Contacto", "Publicidad", "Términos de Uso", "Política de Privacidad"]
+      title: "Información",
+      links: ["Sobre SUDA", "Admisiones", "Calendario Académico", "Reglamentos", "Transparencia", "Contacto"]
     }
   ];
 
@@ -24,38 +24,38 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
-                <Newspaper className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-r from-blue-600 to-orange-600 p-2 rounded-lg">
+                <GraduationCap className="w-6 h-6 text-white" />
               </div>
               <div>
                 <h3 className="text-xl font-bold">
-                  <span className="text-blue-400">Tech</span><span className="text-purple-400">Herald</span>
+                  <span className="text-blue-400">SUDA</span> <span className="text-orange-400">NOTICIAS</span>
                 </h3>
-                <p className="text-xs text-slate-400">El Periódico de la Era Digital</p>
+                <p className="text-xs text-slate-400">Instituto Superior Sudamericano</p>
               </div>
             </div>
             <p className="text-slate-300 mb-6 text-sm leading-relaxed">
-              Tu fuente confiable de noticias tecnológicas, análisis de proyectos informáticos y tendencias 
-              de la industria digital. Manténte informado sobre el futuro de la tecnología.
+              Mantente informado sobre todas las actividades, logros y noticias del Instituto Superior 
+              Sudamericano, la institución líder en educación superior en Cuenca.
             </p>
             
             <div className="space-y-2 text-sm text-slate-300 mb-6">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-blue-400" />
-                <span>Redacción Global Digital</span>
+                <span>Av. Turuhuayco 3-69 y Av. La Prensa, Cuenca</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <span>+1 (555) 123-TECH</span>
+                <span>(07) 282-3773 / (07) 282-3774</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <span>redaccion@techherald.com</span>
+                <span>info@sudamericano.edu.ec</span>
               </div>
             </div>
 
             <div className="flex space-x-4">
-              {[Github, Linkedin, Twitter, Rss].map((Icon, index) => (
+              {[Facebook, Instagram, Youtube, Globe].map((Icon, index) => (
                 <a
                   key={index}
                   href="#"
@@ -89,10 +89,10 @@ export default function Footer() {
 
         {/* Newsletter Signup */}
         <div className="border-t border-slate-800 mt-12 pt-8">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 mb-8">
+          <div className="bg-gradient-to-r from-blue-600/20 to-orange-600/20 rounded-xl p-6 mb-8">
             <div className="text-center">
-              <h4 className="text-xl font-bold mb-2">Suscríbete a TechHerald Daily</h4>
-              <p className="text-slate-300 mb-4">Recibe las noticias más importantes de tecnología cada mañana</p>
+              <h4 className="text-xl font-bold mb-2">Boletín Informativo SUDA</h4>
+              <p className="text-slate-300 mb-4">Recibe las últimas noticias del Instituto Superior Sudamericano</p>
               <div className="flex max-w-md mx-auto">
                 <input
                   type="email"
@@ -111,12 +111,12 @@ export default function Footer() {
         <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-slate-400 text-sm">
-              © 2025 TechHerald. Todos los derechos reservados.
+              © 2025 Instituto Superior Sudamericano. Todos los derechos reservados.
             </p>
             <div className="flex items-center space-x-6 text-sm text-slate-400">
-              <span className="bg-slate-800 px-3 py-1 rounded-full">Edición Digital</span>
-              <a href="#" className="hover:text-blue-400 transition-colors">Aviso Legal</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">Cookies</a>
+              <span className="bg-slate-800 px-3 py-1 rounded-full">Cuenca, Ecuador</span>
+              <a href="#" className="hover:text-blue-400 transition-colors">Política de Privacidad</a>
+              <a href="#" className="hover:text-blue-400 transition-colors">Términos de Uso</a>
             </div>
           </div>
         </div>

@@ -15,42 +15,42 @@ interface NewsItem {
 const featuredNews: NewsItem[] = [
   {
     id: 1,
-    title: "Ecuador Lidera Transformación Digital en Latinoamérica con SIGEF",
-    excerpt: "El Sistema Integrado de Gestión Financiera del Estado ecuatoriano se convierte en modelo regional, generando ahorros millonarios y transparencia total en las finanzas públicas.",
-    author: "María Fernanda Vásquez",
+    title: "Instituto Superior Sudamericano Inaugura Nuevos Laboratorios de Tecnología",
+    excerpt: "La institución cuencana invierte $500,000 en equipamiento de última generación para las carreras de Desarrollo de Software y Redes y Telecomunicaciones, beneficiando a más de 800 estudiantes.",
+    author: "Redacción SUDA",
     time: "Hace 2 horas",
-    image: "https://images.pexels.com/photos/5380664/pexels-photo-5380664.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    category: "Gobierno Digital",
+    image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    category: "Infraestructura",
     featured: true
   },
   {
     id: 2,
-    title: "OpenAI Revoluciona la Industria con el Lanzamiento de GPT-5",
-    excerpt: "El modelo más avanzado de inteligencia artificial promete transformar sectores completos con capacidades multimodales sin precedentes y razonamiento avanzado.",
-    author: "Dr. Carlos Mendoza",
+    title: "Estudiantes de SUDA Ganan Concurso Nacional de Emprendimiento",
+    excerpt: "El equipo 'InnovaTech' de la carrera de Administración de Empresas se alzó con el primer lugar en el Concurso Nacional de Emprendimiento Universitario con su proyecto de aplicación móvil para comercio local.",
+    author: "Departamento de Comunicación",
     time: "Hace 4 horas",
-    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    category: "Inteligencia Artificial",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    category: "Logros Estudiantiles",
     featured: true
   },
   {
     id: 3,
-    title: "Fracaso de Telemedicina en Ecuador: Lecciones Aprendidas",
-    excerpt: "El ambicioso proyecto nacional de telemedicina enfrenta obstáculos técnicos y culturales que revelan los desafíos de la digitalización en salud rural.",
-    author: "Ana Lucía Morales",
+    title: "SUDA Firma Convenio con Empresas Locales para Prácticas Profesionales",
+    excerpt: "Más de 50 empresas cuencanas se suman al programa de prácticas pre-profesionales del Instituto, garantizando inserción laboral del 85% de graduados en los últimos dos años.",
+    author: "Vinculación con la Comunidad",
     time: "Hace 6 horas",
-    image: "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    category: "Salud Digital",
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    category: "Convenios",
     featured: true
   },
   {
     id: 4,
-    title: "Meta Abandona Horizon Worlds Enterprise Tras Pérdidas Millonarias",
-    excerpt: "La baja adopción empresarial y los problemas técnicos persistentes llevan a Meta a cancelar su ambicioso proyecto de realidad virtual corporativa.",
-    author: "Roberto Silva",
+    title: "Instituto Superior Sudamericano Celebra 25 Años de Excelencia Educativa",
+    excerpt: "Con una ceremonia especial, SUDA conmemora un cuarto de siglo formando profesionales de calidad en Cuenca, con más de 15,000 graduados que contribuyen al desarrollo del país.",
+    author: "Rectorado SUDA",
     time: "Hace 8 horas",
-    image: "https://images.pexels.com/photos/8728382/pexels-photo-8728382.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    category: "Realidad Virtual",
+    image: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    category: "Institucional",
     featured: true
   }
 ];
@@ -75,7 +75,7 @@ export default function NewsCarousel() {
   };
 
   return (
-    <section className="relative bg-slate-900 text-white overflow-hidden">
+    <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900 text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent z-10"></div>
       
       {/* Carousel Container */}
@@ -92,7 +92,7 @@ export default function NewsCarousel() {
               alt={news.title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-800/60 to-transparent"></div>
           </div>
         ))}
       </div>
@@ -102,18 +102,18 @@ export default function NewsCarousel() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-2xl">
             <div className="mb-4">
-              <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                 {featuredNews[currentSlide].category}
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
               {featuredNews[currentSlide].title}
             </h2>
-            <p className="text-lg md:text-xl text-slate-300 mb-6 leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 mb-6 leading-relaxed">
               {featuredNews[currentSlide].excerpt}
             </p>
             <div className="flex items-center justify-between">
-              <div className="flex items-center space-x-4 text-sm text-slate-300">
+              <div className="flex items-center space-x-4 text-sm text-blue-200">
                 <div className="flex items-center space-x-2">
                   <User className="w-4 h-4" />
                   <span>{featuredNews[currentSlide].author}</span>
@@ -123,7 +123,7 @@ export default function NewsCarousel() {
                   <span>{featuredNews[currentSlide].time}</span>
                 </div>
               </div>
-              <button className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
+              <button className="flex items-center space-x-2 bg-orange-600 hover:bg-orange-700 px-4 py-2 rounded-lg transition-colors">
                 <span>Leer más</span>
                 <ArrowRight className="w-4 h-4" />
               </button>

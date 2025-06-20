@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, User, ArrowRight, Globe, Briefcase, Heart, Zap, Shield, Cpu } from 'lucide-react';
+import { Clock, User, ArrowRight, GraduationCap, Users, Award, Calendar, BookOpen, Briefcase } from 'lucide-react';
 
 interface Article {
   id: number;
@@ -15,63 +15,63 @@ interface Article {
 const articles: Article[] = [
   {
     id: 1,
-    title: "Ecuador Firma Acuerdo de Cooperación Tecnológica con Singapur",
-    excerpt: "Convenio bilateral permitirá intercambio de conocimientos en ciudades inteligentes, gobierno digital y ciberseguridad entre ambos países.",
-    author: "Diplomacia Digital",
+    title: "Nueva Carrera de Inteligencia Artificial se Incorpora a la Oferta Académica",
+    excerpt: "SUDA amplía su portafolio educativo con una carrera innovadora que responde a las demandas del mercado tecnológico actual, con énfasis en machine learning y análisis de datos.",
+    author: "Vicerrectorado Académico",
     time: "Hace 2 horas",
-    image: "https://images.pexels.com/photos/3861943/pexels-photo-3861943.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "Internacional",
-    icon: Globe
+    image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "Carreras",
+    icon: GraduationCap
   },
   {
     id: 2,
-    title: "Banco Central del Ecuador Estudia Implementar Moneda Digital",
-    excerpt: "CBDC ecuatoriana podría revolucionar el sistema financiero nacional, reduciendo costos de transacciones y mejorando la inclusión financiera.",
-    author: "Economía Digital",
+    title: "Docentes de SUDA Participan en Congreso Internacional de Educación",
+    excerpt: "Cinco profesores del Instituto presentaron ponencias sobre metodologías innovadoras en el Congreso Internacional de Educación Superior realizado en Quito.",
+    author: "Desarrollo Docente",
     time: "Hace 4 horas",
-    image: "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "Finanzas",
-    icon: Briefcase
+    image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "Docentes",
+    icon: Users
   },
   {
     id: 3,
-    title: "Hospital Metropolitano Implementa Cirugía Robótica Avanzada",
-    excerpt: "Primer centro médico ecuatoriano en adquirir robot quirúrgico Da Vinci Xi, revolucionando procedimientos mínimamente invasivos.",
-    author: "Salud Innovadora",
+    title: "Estudiante de Gastronomía Gana Concurso Regional de Cocina Fusión",
+    excerpt: "María Fernanda Vásquez, estudiante de segundo año de Gastronomía, se coronó campeona del Concurso Regional de Cocina Fusión Andina con su innovadora propuesta culinaria.",
+    author: "Escuela de Gastronomía",
     time: "Hace 6 horas",
-    image: "https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "Salud",
-    icon: Heart
+    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "Estudiantes",
+    icon: Award
   },
   {
     id: 4,
-    title: "Ecuador Inaugura Primera Planta Solar Flotante en Sudamérica",
-    excerpt: "Innovador proyecto en la represa Mazar genera 50MW de energía limpia, posicionando al país como líder en energías renovables.",
-    author: "Energía Verde",
+    title: "SUDA Organiza Feria de Empleo con Más de 80 Empresas Participantes",
+    excerpt: "La décima edición de la Feria de Empleo SUDA conecta a estudiantes y graduados con oportunidades laborales en empresas locales, nacionales e internacionales.",
+    author: "Bolsa de Empleo",
     time: "Hace 8 horas",
-    image: "https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "Energía",
-    icon: Zap
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "Eventos",
+    icon: Briefcase
   },
   {
     id: 5,
-    title: "Ciberataque a Instituciones Financieras Ecuatorianas Frustrado",
-    excerpt: "Unidad de Ciberseguridad Nacional neutraliza intento de ransomware contra bancos locales, fortaleciendo defensas digitales del país.",
-    author: "Seguridad Nacional",
+    title: "Biblioteca Digital de SUDA Incorpora 5,000 Nuevos Títulos",
+    excerpt: "La biblioteca institucional amplía significativamente su colección digital con libros especializados, revistas científicas y recursos multimedia para todas las carreras.",
+    author: "Biblioteca SUDA",
     time: "Hace 10 horas",
-    image: "https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "Ciberseguridad",
-    icon: Shield
+    image: "https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "Recursos",
+    icon: BookOpen
   },
   {
     id: 6,
-    title: "ESPOL Desarrolla Supercomputadora para Investigación Oceánica",
-    excerpt: "Centro de cómputo de alto rendimiento estudiará corrientes marinas y cambio climático en el Pacífico ecuatoriano con IA avanzada.",
-    author: "Investigación Científica",
+    title: "Proceso de Admisiones 2025 Registra Récord de Postulantes",
+    excerpt: "Con más de 3,500 aspirantes, el proceso de admisiones para el período académico 2025 supera todas las expectativas, consolidando a SUDA como referente educativo regional.",
+    author: "Admisiones SUDA",
     time: "Hace 12 horas",
-    image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg?auto=compress&cs=tinysrgb&w=800",
-    category: "Investigación",
-    icon: Cpu
+    image: "https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=800",
+    category: "Admisiones",
+    icon: Calendar
   }
 ];
 
