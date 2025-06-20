@@ -30,11 +30,19 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center text-sm">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             <div className="flex items-center space-x-4">
               <span className="hidden sm:block text-blue-200">Última actualización:</span>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span>Martes, 14 de Enero 2025 - 15:30 ECT</span>
+=======
+            <div className="flex items-center space-x-8">
+              <span className="hidden sm:block text-blue-200">Última actualización:</span>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span>Martes, 14 de Enero 2025 - 21:30 ECT</span>
+>>>>>>> Stashed changes
 =======
             <div className="flex items-center space-x-8">
               <span className="hidden sm:block text-blue-200">Última actualización:</span>
@@ -55,9 +63,15 @@ export default function Header() {
       {/* Main Header - Reducido */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         <div className="flex flex-col items-center py-4">
           {/* Logo y Título Principal - Más compacto */}
           <div className="text-center mb-4">
+=======
+        <div className="flex flex-col items-center py-2">
+          {/* Logo y Título Principal - Más compacto */}
+          <div className="text-center mb-0">
+>>>>>>> Stashed changes
 =======
         <div className="flex flex-col items-center py-2">
           {/* Logo y Título Principal - Más compacto */}
