@@ -2,9 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Newspaper-style typography */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
 /* Smooth scrolling for the entire page */
 html {
   scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Headlines use serif font */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
 }
 
 /* Custom scrollbar */
@@ -17,10 +26,57 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: #dc2626;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #b91c1c;
+}
+
+/* Newspaper-style text columns for long content */
+.newspaper-columns {
+  column-count: 2;
+  column-gap: 2rem;
+  column-rule: 1px solid #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .newspaper-columns {
+    column-count: 1;
+  }
+}
+
+/* Drop cap effect for first letter */
+.drop-cap::first-letter {
+  float: left;
+  font-size: 4rem;
+  line-height: 3rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  font-weight: bold;
+  color: #dc2626;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Breaking news animation */
+@keyframes breaking-news {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.breaking-news-scroll {
+  animation: breaking-news 30s linear infinite;
+}
+
+/* Print-style borders */
+.newspaper-border {
+  border: 3px double #374151;
+}
+
+/* Byline styling */
+.byline {
+  font-variant: small-caps;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
