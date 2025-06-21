@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Menu, X, GraduationCap, BookOpen } from 'lucide-react';
+import { Search, Menu, X, Monitor, Code, BookOpen } from 'lucide-react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,12 +7,12 @@ export default function Header() {
 
   const navigationItems = [
     { name: 'Inicio', href: '#inicio' },
-    { name: 'Noticias', href: '#noticias' },
-    { name: 'Carreras', href: '#carreras' },
-    { name: 'Estudiantes', href: '#estudiantes' },
-    { name: 'Docentes', href: '#docentes' },
-    { name: 'Eventos', href: '#eventos' },
-    { name: 'Admisiones', href: '#admisiones' }
+    { name: 'Introducción', href: '#introduccion' },
+    { name: 'Objetivos', href: '#objetivos' },
+    { name: 'Casos de Estudio', href: '#casos' },
+    { name: 'Análisis', href: '#analisis' },
+    { name: 'Conclusiones', href: '#conclusiones' },
+    { name: 'Bibliografía', href: '#bibliografia' }
   ];
 
   const handleNavClick = (href: string) => {
@@ -26,45 +26,45 @@ export default function Header() {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-2">
+      <div className="bg-gradient-to-r from-slate-900 to-blue-900 text-white py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center text-sm">
             <div className="flex items-center space-x-8">
-              <span className="hidden sm:block text-blue-200">Última actualización:</span>
+              <span className="hidden sm:block text-blue-200">Período de estudio:</span>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span>Martes, 14 de Enero 2025 - 21:30 ECT</span>
+                <span>Junio 2024 - Junio 2025</span>
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <span className="hidden md:block">Cuenca, Ecuador</span>
-              <GraduationCap className="w-4 h-4" />
+              <span className="hidden md:block">Análisis Académico</span>
+              <Monitor className="w-4 h-4" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Main Header - Reducido */}
+      {/* Main Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center py-2">
-          {/* Logo y Título Principal - Más compacto */}
+          {/* Logo y Título Principal */}
           <div className="text-center mb-0">
             <div className="flex justify-center items-center space-x-3 mb-3">
               <div className="bg-gradient-to-r from-blue-600 to-blue-800 p-2 rounded-full">
-                <BookOpen className="w-6 h-6 text-white" />
+                <Code className="w-6 h-6 text-white" />
               </div>
-              <div className="bg-gradient-to-r from-orange-500 to-red-600 p-2 rounded-full">
-                <GraduationCap className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-r from-slate-600 to-slate-800 p-2 rounded-full">
+                <Monitor className="w-6 h-6 text-white" />
               </div>
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-800 to-orange-600 mb-1">
-              SUDA NOTICIAS
+            <h1 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-slate-800 to-blue-600 mb-1">
+              ANÁLISIS DE PROYECTOS INFORMÁTICOS
             </h1>
             <p className="text-lg md:text-xl text-slate-700 font-semibold mb-1">
-              Instituto Superior Sudamericano
+              Casos de Éxito y Fracaso 2024-2025
             </p>
             <p className="text-sm text-slate-600">
-              Formando profesionales de excelencia en Cuenca, Ecuador
+              Un estudio de casos reales en el mundo de la tecnología
             </p>
           </div>
 
@@ -106,7 +106,7 @@ export default function Header() {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Buscar noticias del Instituto Superior Sudamericano..."
+                placeholder="Buscar en el análisis de proyectos informáticos..."
                 className="w-full px-4 py-3 pl-12 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-sm"
               />
               <Search className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />

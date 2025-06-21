@@ -1,70 +1,90 @@
 import React from 'react';
 import Header from './components/Header';
-import NewsCarousel from './components/NewsCarousel';
-import NewsGrid from './components/NewsGrid';
-import CarrerasSection from './components/CarrerasSection';
-import Statistics from './components/Statistics';
-import Footer from './components/Footer';
+import HeroSection from './components/HeroSection';
+import ProjectsGrid from './components/ProjectsGrid';
+import IntroductionSection from './components/IntroductionSection';
+import ObjectivesSection from './components/ObjectivesSection';
+import ConclusionsSection from './components/ConclusionsSection';
+import BibliographySection from './components/BibliographySection';
 
 function App() {
   return (
     <div className="min-h-screen bg-white">
       <Header />
       <section id="inicio">
-        <NewsCarousel />
+        <HeroSection />
       </section>
-      <section id="noticias">
-        <NewsGrid />
+      <section id="introduccion">
+        <IntroductionSection />
       </section>
-      <section id="carreras">
-        <CarrerasSection />
+      <section id="objetivos">
+        <ObjectivesSection />
       </section>
-      <section id="estudiantes">
-        <Statistics />
+      <section id="casos">
+        <ProjectsGrid />
       </section>
-      <section id="docentes">
+      <section id="analisis">
         <div className="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Nuestros Docentes</h2>
-            <p className="text-xl text-slate-600 mb-8">Profesionales especializados comprometidos con la excelencia educativa</p>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-lg text-slate-700">
-                Contamos con más de 180 docentes altamente calificados, con títulos de cuarto nivel y experiencia profesional en sus áreas de especialización.
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-slate-800 mb-4">Análisis Comparativo</h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                Factores determinantes en el éxito y fracaso de proyectos informáticos
               </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-green-50 border border-green-200 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-green-800 mb-6">Factores de Éxito</h3>
+                <ul className="space-y-4 text-green-700">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Planificación técnica adecuada y escalabilidad</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Colaboración internacional y multidisciplinaria</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Enfoque en necesidades reales del usuario</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Financiamiento sostenible y transparente</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-red-50 border border-red-200 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-red-800 mb-6">Factores de Fracaso</h3>
+                <ul className="space-y-4 text-red-700">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Falta de escalabilidad y capacidad técnica</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Problemas de seguridad y ciberataques</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Sobrevaloración de capacidades tecnológicas</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Dependencia excesiva de financiamiento externo</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="eventos">
-        <div className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Próximos Eventos</h2>
-            <p className="text-xl text-slate-600 mb-8">Mantente informado sobre las actividades académicas y culturales</p>
-            <div className="bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl shadow-lg p-8">
-              <p className="text-lg text-slate-700">
-                Feria de Empleo SUDA 2025, Semana Cultural, Conferencias Magistrales y más eventos próximamente.
-              </p>
-            </div>
-          </div>
-        </div>
+      <section id="conclusiones">
+        <ConclusionsSection />
       </section>
-      <section id="admisiones">
-        <div className="py-16 bg-gradient-to-br from-orange-50 to-blue-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-slate-800 mb-4">Proceso de Admisiones</h2>
-            <p className="text-xl text-slate-600 mb-8">Únete a la familia SUDA y transforma tu futuro profesional</p>
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <p className="text-lg text-slate-700 mb-6">
-                Inscripciones abiertas para el período académico 2025. Más de 3,500 aspirantes ya se han registrado.
-              </p>
-              <button className="bg-gradient-to-r from-blue-600 to-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-orange-700 transition-all">
-                Inscríbete Ahora
-              </button>
-            </div>
-          </div>
-        </div>
+      <section id="bibliografia">
+        <BibliographySection />
       </section>
-      <Footer />
     </div>
   );
 }
